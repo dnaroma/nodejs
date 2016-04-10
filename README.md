@@ -12,14 +12,14 @@ EXPOSE your_app_port
 then add `"start": "node <your_app_entrypoint.js>"` to `package.json` like this:
 ```JSON
 {
-  "name": <your app name>,
+  "name": "your_app_name",
   "private": true,
   "main": "index.js",
   "dependencies": {
-    ... your deps
+    "your_deps"
   },
   "devDependencies": {
-    ... your dev deps
+    "your_dev_deps"
   },
   "scripts": {
     "start": "node index.js"
