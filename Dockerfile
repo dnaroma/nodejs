@@ -8,9 +8,6 @@ RUN apt-get install -y build-essential libssl-dev curl sudo bash \
     && curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
-# Install dep for node-canvas
-RUN apt-get install -y libcairo2-dev libjpeg62-turbo-dev libpango1.0-dev libgif-dev build-essential g++
-
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
