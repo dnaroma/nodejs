@@ -12,10 +12,8 @@ RUN apt-get install -y nodejs
 RUN apt-get install -y libcairo2-dev libjpeg62-turbo-dev libpango1.0-dev libgif-dev build-essential g++
 
 #deps for static data
-RUN dpkg --add-architecture i386 && apt update && \
-    echo "deb http://httpredir.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
 RUN apt-get update && \
-    apt-get install -y git python libav-tools python3 python-pip python3-pip wine default-jre sqlite3 && \
+    apt-get install -y git python libav-tools python3 python3-pip default-jre sqlite3 && \
     apt-get clean
 
 RUN mkdir -p /usr/src/app
